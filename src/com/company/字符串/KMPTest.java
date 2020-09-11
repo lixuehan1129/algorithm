@@ -1,7 +1,7 @@
-package com.company;
+package com.company.字符串;
 
 
-public class Main {
+public class KMPTest {
 
     public static void main(String[] args) {
 	    String a = "acdcdc";

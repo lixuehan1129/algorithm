@@ -1,4 +1,4 @@
-package com.company.input;
+package com.company.LRU;
 
 import java.util.HashMap;
 import java.util.LinkedList;

@@ -5,9 +5,12 @@ package com.company.dp;
  */
 public class Match {
     public static void main(String[] args) {
+        System.out.println(isMatch("abc", "a*b"));
+        System.out.println(isMatch("abc", "a*bc"));
+        System.out.println(isMatch("abc", "a.c"));
     }
 
-    public boolean isMatch(String s, String p) {
+    public static boolean isMatch(String s, String p) {
         if (s == null || p == null) {
             return false;
         }
