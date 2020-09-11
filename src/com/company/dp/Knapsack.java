@@ -3,6 +3,7 @@ package com.company.dp;
 /**
  * 背包问题
  * weight 重量   value 价值    W 容量
+ * https://www.kancloud.cn/kancloud/pack/70126
  */
 public class Knapsack {
     public static void main(String[] args) {
