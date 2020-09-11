@@ -1,4 +1,4 @@
-package com.offer.others;
+package com.offer.二分;
 
 
 public class Tte {
