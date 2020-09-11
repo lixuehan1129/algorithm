@@ -1,7 +1,8 @@
-package com.company.input;
+package com.company.dp;
 
-import java.util.HashMap;
-
+/**
+ * 动态规划，正则匹配
+ */
 public class Match {
     public static void main(String[] args) {
     }
