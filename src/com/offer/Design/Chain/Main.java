@@ -1,4 +1,4 @@
-package com.company.Design.Chain;
+package com.offer.Design.Chain;
 
 import java.util.HashMap;
 

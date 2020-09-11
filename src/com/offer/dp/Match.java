@@ -1,4 +1,4 @@
-package com.company.dp;
+package com.offer.dp;
 
 /**
  * 动态规划，正则匹配

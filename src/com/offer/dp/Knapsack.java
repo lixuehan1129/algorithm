@@ -1,4 +1,4 @@
-package com.company.dp;
+package com.offer.dp;
 
 /**
  * 背包问题

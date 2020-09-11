@@ -1,4 +1,4 @@
-package com.company.Design.Builder;
+package com.offer.Design.Builder;
 
 public class BuilderTest {
     public static void main(String[] args) {

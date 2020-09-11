@@ -1,10 +1,10 @@
-package com.company.Design.Chain;
+package com.offer.Design.Chain;
 
-public class Task1 implements IBaseTask{
+public class Task2 implements IBaseTask{
     @Override
     public void doAction(String isTask, IBaseTask iBaseTask) {
-        if("no".equals(isTask)){
-            System.out.println("拦截器1");
+        if("null".equals(isTask)){
+            System.out.println("拦截器2");
         }else {
             iBaseTask.doAction(isTask, iBaseTask);
         }

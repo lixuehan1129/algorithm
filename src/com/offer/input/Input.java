@@ -1,4 +1,4 @@
-package com.company.input;
+package com.offer.input;
 
 import java.util.Scanner;
 

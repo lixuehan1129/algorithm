@@ -1,4 +1,4 @@
-package com.company.字符串;
+package com.offer.字符串;
 
 
 public class KMPTest {

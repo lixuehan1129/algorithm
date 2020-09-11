@@ -1,4 +1,4 @@
-package com.company.LRU;
+package com.offer.LRU;
 
 import java.util.HashMap;
 import java.util.LinkedList;
