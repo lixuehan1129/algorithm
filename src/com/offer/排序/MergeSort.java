@@ -49,6 +49,8 @@ public class MergeSort {
         }
     }
 
+    //迭代
+
     public static void sort(int[] arr, int left, int right){
         if(left == right) return;
         //分成两块
