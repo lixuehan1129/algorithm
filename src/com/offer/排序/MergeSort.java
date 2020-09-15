@@ -16,8 +16,37 @@ public class MergeSort {
     public static void main(String[] args) {
         int[] arr = {5, 3, 6, 8, 1, 7, 9, 4, 2};
         //int[] arr = {1, 4, 7, 8, 3, 6, 9};
-        sort(arr, 0, arr.length - 1);
+        //sort(arr, 0, arr.length - 1);
+        sort1(arr, 1, arr.length);
         print(arr);
+    }
+
+    //迭代
+    public static void sort1(int[] arr, int left, int right){
+        int leftL, leftR; //一组元素左边的部分
+        int rightL, rightR; //一组元素右边的部分
+
+        int[] temp = new int[right];
+        for (int i = left; i < right; i = 2*i) {
+
+            for (leftL = 0; leftL < right - i; leftL = rightR){
+                leftR = leftL + i;//左边结束
+                rightL = leftL + i;//右边开始
+                rightR = rightL + i;//右边结束
+                if(rightR > right) rightR = right;
+                int k = 0;
+                while (leftL < leftR && rightL < rightR){
+                    temp[k++] = arr[leftL] < arr[rightL] ? arr[leftL++] : arr[rightL++];
+                }
+                while (leftL < leftR) temp[k++] = arr[leftL++];
+                //while (rightL < rightR) temp[k++] = arr[rightL++];
+
+                //赋回去
+                while (k > 0){
+                    arr[--rightL] = temp[--k];
+                }
+            }
+        }
     }
 
     public static void sort(int[] arr, int left, int right){
