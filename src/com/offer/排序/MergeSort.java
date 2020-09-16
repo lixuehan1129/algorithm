@@ -21,6 +21,29 @@ public class MergeSort {
         print(arr);
     }
 
+
+    public static void sort2(int[] arr, int left, int right){
+        if(left >= right) return;
+        int mid = left + (right - left) / 2;
+        sort2(arr, left, mid);
+        sort2(arr, mid + 1, left);
+        partition(arr, left, mid + 1, right);
+    }
+
+    public static void partition(int[] arr, int left, int mid, int right){
+        int[] temp = new int[right - left + 1];
+        int i = left, j = mid;
+        int k = 0;
+        while (i < mid && j <= right){
+            temp[k++] = arr[i] < arr[j] ? arr[i++] : arr[j++];
+        }
+        while (i < mid) temp[k++] = arr[i++];
+        while (j <= right) temp[k++] = arr[j++];
+        for (int m = 0; m < temp.length; m++) {
+            arr[left + m] = temp[m];
+        }
+    }
+
     //迭代
     public static void sort1(int[] arr, int left, int right){
         int leftL, leftR; //一组元素左边的部分
