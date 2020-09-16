@@ -1,5 +1,7 @@
 package com.offer.learn.线程;
 
+import java.util.HashMap;
+
 /**
  * wait() 与 notify() 和 notifyAll()
  * wait()：令当前线程挂起并放弃CPU、同步资源，
