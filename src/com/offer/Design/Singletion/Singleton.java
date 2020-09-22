@@ -14,6 +14,8 @@ package com.offer.Design.Singletion;
  */
 
 
+import java.util.Arrays;
+
 /**
  * 懒加载 懒汉式，线程不安全
  */
