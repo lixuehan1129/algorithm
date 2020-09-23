@@ -82,6 +82,7 @@ class LRUCacheLinked{
     }
     //添加元素
     public void put(Integer key, Integer value){
+        get(key);
         cache.put(key, value);
         if(!list.contains(key)){
             list.add(key);
