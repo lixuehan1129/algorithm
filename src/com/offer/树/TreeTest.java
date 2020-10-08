@@ -1,6 +1,7 @@
 package com.offer.树;
 
 
+import com.offer.排序.HeapSort;
 import com.offer.线性表.Queue;
 
 import java.io.BufferedReader;
@@ -135,7 +136,7 @@ public class TreeTest {
 
     public static void HeapSort(){
         String[] arr = {"S","O","R","T","E","X","A","M","P","L","E"};
-        HeapSort.sort(arr);
+        //HeapSort.sort(arr);
         System.out.println(Arrays.toString(arr));
     }
 

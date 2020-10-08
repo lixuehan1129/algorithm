@@ -5,11 +5,58 @@ import java.util.LinkedList;
 
 public class HeapSort {
     public static void main(String []args){
-        int []arr = {7,6,7,11,5,12,3,0,1};
+        //int []arr = {7,6,7,11,5,12,3,0,1};
+        int[] arr = {5, 3, 2, 8, 1, 7, 9, 4, 6, 10, 6, 0, 12};
         System.out.println("排序前："+ Arrays.toString(arr));
-        sort(arr);
+        heapSort(arr);
         System.out.println("排序后："+ Arrays.toString(arr));
     }
+
+    public static void heapSort(int[] arr){
+        for(int i = arr.length / 2 - 1; i >= 0; i--){
+            adjust(arr, i, arr.length);
+        }
+
+        for (int i = arr.length - 1; i > 0; i--) {
+            swap(arr, 0, i);
+            adjust(arr, 0, i);
+        }
+    }
+
+    public static void adjust(int[] arr, int index, int len){
+        int temp = arr[index];
+        for (int i = index * 2 + 1; i < len; i = 2 * i + 1) {
+            if(i + 1 < len && arr[i] < arr[i + 1]){
+                i++;
+            }
+            if(arr[i] > temp){
+                arr[index] = arr[i];
+                index = i;
+            }
+        }
+        arr[index] = temp;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static void sort(int []arr){
         //1.构建大顶堆

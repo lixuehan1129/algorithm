@@ -16,13 +16,21 @@ import java.util.*;
  */
 public class InTest {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int M = sc.nextInt();
-        String[] strs = new String[M];
-        for(int i = 0; i < M; i++){
-            strs[i] = sc.next();
+        int x = 8;
+        int a = x - 1;
+        int l = 1;
+        while (a != 0){
+            a = a >> 1;
+            l = l << 1;
         }
-        Solution(M, strs);
+        System.out.println(l);
+//        Scanner sc = new Scanner(System.in);
+//        int M = sc.nextInt();
+//        String[] strs = new String[M];
+//        for(int i = 0; i < M; i++){
+//            strs[i] = sc.next();
+//        }
+//        Solution(M, strs);
     }
 
     static void Solution(int M, String[] strs){
