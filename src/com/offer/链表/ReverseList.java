@@ -1,5 +1,6 @@
 package com.offer.链表;
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class ReverseList {
@@ -248,6 +249,28 @@ class Solution {
 
             curr.next = l1 != null ? l1 : l2;
             return sentry.next;
+        }
+    }
+
+    class 滑动窗口{
+        public int[] maxSlidingWindow(int[] nums, int k) {
+            if(nums == null || nums.length < 1 || k < 1) return new int[]{};
+            int[] res = new int[nums.length - k + 1];
+            LinkedList<Integer> list = new LinkedList<>();
+            int index = 0;
+            for(int i = 0; i < nums.length; i++){
+                while(!list.isEmpty() && nums[list.peekLast()] <= nums[i]){
+                    list.pollLast();
+                }
+                list.addLast(i);
+                if(list.peekFirst() <= i - k){
+                    list.pollFirst();
+                }
+                if(i >= k - 1){
+                    res[index++] = nums[list.peekFirst()];
+                }
+            }
+            return res;
         }
     }
 
