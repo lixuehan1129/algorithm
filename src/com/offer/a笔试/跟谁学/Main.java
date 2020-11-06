@@ -22,7 +22,7 @@ public class Main {
             for (int j = 0; j < n; j++) {
                 System.out.print(nums[i][j] + " ");
             }
-            System.out.println();
+            System.out.println();//
         }
     }
 
