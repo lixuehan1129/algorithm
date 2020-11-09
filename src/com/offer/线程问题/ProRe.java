@@ -9,12 +9,11 @@ public class ProRe {
     private int count = 0;
     private final int LENGTH = 10;
     public static void main(String[] args) {
-//        ProRe proRe = new ProRe();
-//        for (int i = 0; i < 6; i++) {
-//            new Thread(proRe.new Producer()).start();
-//            new Thread(proRe.new Consumer()).start();
-//        }
-
+        ProRe proRe = new ProRe();
+        for (int i = 0; i < 6; i++) {
+            new Thread(proRe.new Producer()).start();
+            new Thread(proRe.new Consumer()).start();
+        }
         BlockingQueue<Integer> deque = new ArrayBlockingQueue<>(10);
         new Thread(() -> {
             for(int i = 0; i < 40; i++){

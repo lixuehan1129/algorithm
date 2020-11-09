@@ -1,7 +1,6 @@
 package com.offer.排序;
 
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 
 public class ReMember {
     public static void main(String[] args) {
@@ -11,8 +10,34 @@ public class ReMember {
         //heapSort(arr);
         //bubbleSort(arr);
         //selectSort(arr);
-        insertSort(arr);
-        System.out.println(Arrays.toString(arr));
+        //insertSort(arr);
+        //System.out.println(Arrays.toString(arr));
+        mapSort();
+    }
+
+    public static void mapSort(){
+        Map<String, String> map = new HashMap<>();
+        map.put("a", "1");
+        map.put("b", "2");
+        map.put("c", "6");
+        map.put("d", "4");
+        Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()){
+            Map.Entry m = iterator.next();
+            System.out.println(m.getKey() + " " + m.getValue());
+        }
+
+        List<Map.Entry<String, String>> list = new ArrayList<>(map.entrySet());
+        Collections.sort(list, new Comparator<Map.Entry<String, String>>() {
+            @Override
+            public int compare(Map.Entry<String, String> o1, Map.Entry<String, String> o2) {
+                return o1.getValue().compareTo(o2.getValue());
+            }
+        });
+        for (Map.Entry<String, String> entry : list) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+
     }
 
     public static void insertSort(int[] arr){

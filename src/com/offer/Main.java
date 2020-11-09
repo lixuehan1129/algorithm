@@ -1,49 +1,14 @@
 package com.offer;
 
-import javafx.scene.transform.Scale;
-
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        //String s = "google";
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        int len = s.length();
-        int max = 0;
-        for(int i = 1; i < len; i++){
-            int length = check(s, i);
-            //System.out.println(length);
-            max = Math.max(length, max);
+        int[] num = new int[]{10, 7, 3, 8, 9, 1, 2};
+        int x = 0, y = 0;
+        for (int i = 1; i < num.length; i++) {
+            if(num[i] > num[x]) x = i;
+            else if(num[i] < num[y]) y = i;
         }
-        System.out.println(max);
+        System.out.println(num[x] - num[y]);
     }
 
-    public static int check(String s, int index){
-        int left = index;
-        int right = index;
-        int maxLen = 0;
-        while (left >= 0 && right < s.length()){
-            if(s.charAt(left) == s.charAt(right)){
-                left--;
-                right++;
-            }else{
-                break;
-            }
-        }
-        maxLen = right - left - 1;
-        //
-        left = index;
-        right = index + 1;
-        while (left >= 0 && right < s.length()){
-            if(s.charAt(left) == s.charAt(right)){
-                left--;
-                right++;
-            }else{
-                break;
-            }
-        }
-        maxLen = Math.max(maxLen, right - left - 1);
-        return maxLen;
-    }
 }

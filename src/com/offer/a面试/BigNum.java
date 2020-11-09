@@ -1,5 +1,8 @@
 package com.offer.a面试;
 
+import java.util.ArrayDeque;
+import java.util.LinkedList;
+
 class Main {
     public static void main(String[] args) {
         System.out.println(re());
@@ -8,6 +11,7 @@ class Main {
         node1.next.next = new Node(8);
         Node node2 = new Node(2);
         node2.next = new Node(8);
+
 
         Node pre1 = reverse(node1);
         Node pre2 = reverse(node2);
